@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhjm3crqn0ech"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_aelvw"]
+[ext_resource type="Texture2D" uid="uid://cgswqvrs53bjy" path="res://Frog/CharacterSheet_CharacterFront.png" id="1_wcnmv"]
+
+[sub_resource type="Animation" id="Animation_c2x8y"]
+resource_name = "Idle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 2, 1, 0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_fnxly"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_lmkoc"]
+resource_name = "Walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wbjvg"]
+_data = {
+"Idle": SubResource("Animation_c2x8y"),
+"RESET": SubResource("Animation_fnxly"),
+"Walk": SubResource("Animation_lmkoc")
+}
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_aelvw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wcnmv")
+hframes = 5
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wbjvg")
+}
