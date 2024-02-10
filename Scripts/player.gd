@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Node2D
 
 const SPEED = 200
 var destination := Vector2.ZERO
@@ -16,6 +16,5 @@ func _process(delta : float) -> void:
 	if position != destination:
 		animPlayer.play("Walk")
 		position = position.move_toward(destination, delta*SPEED)
-	
 	else:
 		animPlayer.play("Idle")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhjm3crqn0ech"]
+[gd_scene load_steps=8 format=3 uid="uid://dhjm3crqn0ech"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_aelvw"]
 [ext_resource type="Texture2D" uid="uid://cgswqvrs53bjy" path="res://Frog/CharacterSheet_CharacterFront.png" id="1_wcnmv"]
@@ -59,7 +59,10 @@ _data = {
 "Walk": SubResource("Animation_lmkoc")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvxko"]
+size = Vector2(214, 171)
+
+[node name="Player" type="Node2D"]
 script = ExtResource("1_aelvw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -71,3 +74,9 @@ vframes = 3
 libraries = {
 "": SubResource("AnimationLibrary_wbjvg")
 }
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 100)
+shape = SubResource("RectangleShape2D_qvxko")
