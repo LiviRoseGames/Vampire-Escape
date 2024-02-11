@@ -1,11 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cl13hdfrt4fm8"]
-
-[ext_resource type="Texture2D" uid="uid://onqvdcfrub3o" path="res://kenneytiles/Isometric/bookcaseHalfWideEmpty_N.png" id="1_rdai8"]
+[gd_scene format=3 uid="uid://cl13hdfrt4fm8"]
 
 [node name="Object" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_rdai8")
 offset = Vector2(0, -242)
 
 [node name="Area2D" type="Area2D" parent="."]
