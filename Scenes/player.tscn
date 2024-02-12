@@ -1,72 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhjm3crqn0ech"]
+[gd_scene load_steps=4 format=3 uid="uid://dhjm3crqn0ech"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_aelvw"]
 [ext_resource type="Texture2D" uid="uid://cu28ms6as3r4t" path="res://HOLY_DHIT.png" id="2_xds1l"]
 
-[sub_resource type="Animation" id="Animation_c2x8y"]
-resource_name = "Idle"
-length = 1.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnyx1"]
+size = Vector2(28, 47)
 
-[sub_resource type="Animation" id="Animation_fnxly"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_lmkoc"]
-resource_name = "Walk"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wbjvg"]
-_data = {
-"Idle": SubResource("Animation_c2x8y"),
-"RESET": SubResource("Animation_fnxly"),
-"Walk": SubResource("Animation_lmkoc")
-}
-
-[node name="Player" type="Node2D"]
+[node name="Player" type="Area2D"]
 script = ExtResource("1_aelvw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -26)
 texture = ExtResource("2_xds1l")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_wbjvg")
-}
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24.5)
+shape = SubResource("RectangleShape2D_cnyx1")
+
+[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
