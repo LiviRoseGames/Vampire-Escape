@@ -3,7 +3,7 @@ extends Node2D
 const SPEED = 200
 
 #@onready var animPlayer = $AnimationPlayer
-@onready var nav = $NavigationAgent2D
+@onready var nav : NavigationAgent2D = $NavigationAgent2D
 var finished = false
 
 func _ready() -> void:
@@ -26,3 +26,4 @@ func _input(event):
 
 func _on_navigation_agent_2d_navigation_finished():
 	finished = true
+

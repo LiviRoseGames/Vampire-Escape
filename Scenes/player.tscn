@@ -10,8 +10,8 @@ size = Vector2(28, 47)
 script = ExtResource("1_aelvw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -26)
 texture = ExtResource("2_xds1l")
+offset = Vector2(0, -26)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 

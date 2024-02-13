@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://syx66fga20xo"]
+[gd_scene load_steps=8 format=3 uid="uid://syx66fga20xo"]
 
 [ext_resource type="Texture2D" uid="uid://h0l2j4m0aiow" path="res://tileset.png" id="1_4ajed"]
 [ext_resource type="PackedScene" uid="uid://dhjm3crqn0ech" path="res://Scenes/player.tscn" id="1_ivy37"]
 [ext_resource type="Script" path="res://Scenes/IsoMap.gd" id="2_554n1"]
+[ext_resource type="PackedScene" uid="uid://cl13hdfrt4fm8" path="res://Scenes/object.tscn" id="2_nklyq"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_0qrli"]
 vertices = PackedVector2Array(474, 150, 474, 138, 489, 126, 520, 141, 485, 159, 484, 159, 470, 152, 470, 136, 304, 171, 352, 228, 206, 155, 212, 153, 262, 150, 444, 177, 447, 178, 406, 142, 410, 144, 406, 146, 378, 134, 406, 158, 378, 122, 406, 130, 451, 107, 336, 101, 202, 94, 202, 82, 256, 83, 298, 62, 298, 50, 240, 2, 256, 29, 214, 50, 160, 61, 250, 134, 262, 138, 250, 122, 214, 62, 70, 87, 118, 82, 118, 94, 152, 128, 160, 115, 156, 127, 208, 101, 444, 111)
@@ -52,3 +53,7 @@ position = Vector2(300, 100)
 
 [node name="Player" parent="." instance=ExtResource("1_ivy37")]
 position = Vector2(381, 163)
+
+[node name="Object" parent="." instance=ExtResource("2_nklyq")]
+position = Vector2(304, 135)
+sceneTransfer = "res://Scenes/desk.tscn"
