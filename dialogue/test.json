@@ -1,1 +1,1 @@
-[]
+[{"commands_raw":"Dialogue Blah Blah\nBladdity Blah\n\n?> this is choice 1 -> choice number one\n?> this is choice 2 -> choice number two","gnode_name":"start","id":0,"name":"Start","position":[100,140]},{"commands_raw":"you chose one!\nyay!","gnode_name":"choice number one","id":1,"name":"choice number one","position":[400,60]},{"commands_raw":"You picked choice two!\nWow!","gnode_name":"choice number two","id":2,"name":"choice number two","position":[480,200]}]

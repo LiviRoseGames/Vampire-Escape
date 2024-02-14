@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3hy4q320bc55"]
+
+[ext_resource type="Script" path="res://Scripts/choice_button.gd" id="1_73nxh"]
+
+[node name="ChoiceButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "sample text"
+script = ExtResource("1_73nxh")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
