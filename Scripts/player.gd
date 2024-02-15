@@ -7,6 +7,7 @@ const SPEED = 200
 var finished = false
 
 func _ready() -> void:
+	GlobalManager.selectedObject.connect(move_to_object)
 	#setting the destination
 	nav.target_position = position
 	
@@ -27,3 +28,5 @@ func _input(event):
 func _on_navigation_agent_2d_navigation_finished():
 	finished = true
 
+func move_to_object():
+	print("Moving to object")
