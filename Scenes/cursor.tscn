@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://do6c0f4c8ainn"]
+
+[ext_resource type="Script" path="res://Scripts/cursor.gd" id="1_vq1ls"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xavje"]
+
+[node name="Cursor" type="Area2D"]
+script = ExtResource("1_vq1ls")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(10, 10)
+scale = Vector2(10, 10)
+polygon = PackedVector2Array(-1, -1, -1, 0, 0, 1, 0, 0, 1, 0, 0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_xavje")
