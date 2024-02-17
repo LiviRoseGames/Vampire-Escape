@@ -1,8 +1,11 @@
 extends Area2D
 
+const MIN_MOVE = 20
+
 var overObject : bool = false
 var cursor_PlayerStop
 var playerCoordinates : Vector2
+var oldPlayerCoordinates : Vector2
 
 signal movePlayer(sig_MoveCoordinates)
 
@@ -18,11 +21,17 @@ func _input(event):
 			playerCoordinates = cursor_PlayerStop
 		elif not overObject:
 			playerCoordinates = get_global_mouse_position()
+		minimumMovementCheck()
+
+func minimumMovementCheck():
+	var distance = oldPlayerCoordinates - playerCoordinates
+	if abs(distance.x) > MIN_MOVE or abs(distance.y) > MIN_MOVE:
 		emit_signal("movePlayer", playerCoordinates)
+		oldPlayerCoordinates = playerCoordinates
+		print(distance)
 
 func _on_area_entered(area):
 	overObject = true
-
 
 func _on_area_exited(area):
 	overObject = false
