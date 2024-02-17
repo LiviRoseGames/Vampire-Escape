@@ -3,6 +3,8 @@ extends Area2D
 var selected : bool
 var playerStop : Vector2
 
+signal send_PlayerStop(sig_PlayerStop)
+
 #var stoppingPointDirection : int
 
 @export var sceneTransfer : String
@@ -18,28 +20,25 @@ func _ready():
 	selected = false
 	
 	match stoppingPointDirection:
-		1:
+		0:
 			playerStop = Vector2(global_position.x, global_position.y - stoppingPointOffset)
-		2:
+		1:
 			playerStop = Vector2(global_position.x + stoppingPointOffset, global_position.y)
-		3:
+		2:
 			playerStop = Vector2(global_position.x, global_position.y + stoppingPointOffset)
-		4:
+		3:
 			playerStop = Vector2(global_position.x - stoppingPointOffset, global_position.y)
+	
+	emit_signal("send_PlayerStop", playerStop)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-func _input(event):
-	if event is InputEventMouseButton && selected:
-		GlobalManager.selectedObject.emit(playerStop)
-		#get_tree().change_scene_to_file(sceneTransfer)
-
-func _on_mouse_entered():
+func _on_area_entered(area):
 	animPlayer.play("Glow")
 	selected = true
 
-func _on_mouse_exited():
+func _on_area_exited(area):
 	animPlayer.play("RESET")
 	selected = false
