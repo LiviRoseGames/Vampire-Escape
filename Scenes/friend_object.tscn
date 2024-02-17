@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cl13hdfrt4fm8"]
+[gd_scene load_steps=9 format=3 uid="uid://dlx32be1pqpcg"]
 
-[ext_resource type="Script" path="res://Scripts/object.gd" id="1_b1sji"]
-[ext_resource type="Shader" path="res://Art/shader/border.gdshader" id="2_yj7sl"]
-[ext_resource type="Texture2D" uid="uid://bn0tb8rwm5gdo" path="res://Art/GAME/BOI.png" id="3_yf32t"]
+[ext_resource type="Script" path="res://Scripts/object.gd" id="1_obg1m"]
+[ext_resource type="Shader" path="res://Art/shader/border.gdshader" id="2_hbsae"]
+[ext_resource type="Texture2D" uid="uid://bn0tb8rwm5gdo" path="res://Art/GAME/BOI.png" id="3_1xkps"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eeq1j"]
-shader = ExtResource("2_yj7sl")
+shader = ExtResource("2_hbsae")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/line_thickness = 0.0
 
@@ -77,12 +77,11 @@ size = Vector2(21, 66)
 position = Vector2(0, -10)
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("1_b1sji")
+script = ExtResource("1_obg1m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_eeq1j")
-texture = ExtResource("3_yf32t")
-offset = Vector2(0, -26)
+texture = ExtResource("3_1xkps")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -90,7 +89,8 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -26)
+visible = false
+position = Vector2(1, -30)
 shape = SubResource("RectangleShape2D_vx7lm")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

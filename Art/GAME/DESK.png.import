@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgswqvrs53bjy"
-path="res://.godot/imported/CharacterSheet_CharacterFront.png-8a5957520d2f47cfc77ff79c19605d31.ctex"
+uid="uid://xupyaqhvjxe"
+path="res://.godot/imported/DESK.png-14569cc915e0d42545fe3ecb0fadb7bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Frog/CharacterSheet_CharacterFront.png"
-dest_files=["res://.godot/imported/CharacterSheet_CharacterFront.png-8a5957520d2f47cfc77ff79c19605d31.ctex"]
+source_file="res://Art/GAME/DESK.png"
+dest_files=["res://.godot/imported/DESK.png-14569cc915e0d42545fe3ecb0fadb7bd.ctex"]
 
 [params]
 

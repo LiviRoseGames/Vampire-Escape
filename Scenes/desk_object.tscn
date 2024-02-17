@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cl13hdfrt4fm8"]
+[gd_scene load_steps=8 format=3 uid="uid://b4lbispnxv0lj"]
 
-[ext_resource type="Script" path="res://Scripts/object.gd" id="1_b1sji"]
-[ext_resource type="Shader" path="res://Art/shader/border.gdshader" id="2_yj7sl"]
-[ext_resource type="Texture2D" uid="uid://bn0tb8rwm5gdo" path="res://Art/GAME/BOI.png" id="3_yf32t"]
+[ext_resource type="Script" path="res://Scripts/object.gd" id="1_2y8mt"]
+[ext_resource type="Shader" path="res://Art/shader/border.gdshader" id="2_nqbpm"]
+[ext_resource type="Texture2D" uid="uid://xupyaqhvjxe" path="res://Art/GAME/DESK.png" id="3_phwvw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eeq1j"]
-shader = ExtResource("2_yj7sl")
+shader = ExtResource("2_nqbpm")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/line_thickness = 0.0
 
@@ -14,7 +14,7 @@ resource_name = "Glow"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -70,18 +70,15 @@ _data = {
 "RESET": SubResource("Animation_2peoq")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vx7lm"]
-size = Vector2(21, 66)
-
 [node name="Object" type="Area2D"]
 position = Vector2(0, -10)
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("1_b1sji")
+script = ExtResource("1_2y8mt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_eeq1j")
-texture = ExtResource("3_yf32t")
+texture = ExtResource("3_phwvw")
 offset = Vector2(0, -26)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -89,9 +86,9 @@ libraries = {
 "": SubResource("AnimationLibrary_gg6wq")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -26)
-shape = SubResource("RectangleShape2D_vx7lm")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -26.5)
+polygon = PackedVector2Array(-34, 28.5, -32, 28.5, -30, 28.5, -30, 1.5, -18, 7.5, -18, 35.5, -12, 35.5, -12, 4.5, -2, 0.5, -2, 11.5, 17, 20.5, 20, 20.5, 34, 13.5, 34, -18.5, 17, -26.5, 1, -19.5, 1, -35.5, -23, -24.5, -23, -7.5, -25, -6.5, -25, -10.5, -26, -11.5, -28, -11.5, -29, -10.5, -29, -4.5, -34, -2.5)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b42ldskueqwxd"
-path="res://.godot/imported/CharacterSheet_FroggoBack.png-01201f47e322e550cd546b3ded03afe5.ctex"
+uid="uid://drm742wiu3nbo"
+path="res://.godot/imported/DESKCHAIR.png-22220524d250ecc5cf955629135f299b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Frog/CharacterSheet_FroggoBack.png"
-dest_files=["res://.godot/imported/CharacterSheet_FroggoBack.png-01201f47e322e550cd546b3ded03afe5.ctex"]
+source_file="res://Art/GAME/DESKCHAIR.png"
+dest_files=["res://.godot/imported/DESKCHAIR.png-22220524d250ecc5cf955629135f299b.ctex"]
 
 [params]
 

@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cl13hdfrt4fm8"]
+[gd_scene load_steps=9 format=3 uid="uid://n20w3364s4fp"]
 
-[ext_resource type="Script" path="res://Scripts/object.gd" id="1_b1sji"]
-[ext_resource type="Shader" path="res://Art/shader/border.gdshader" id="2_yj7sl"]
-[ext_resource type="Texture2D" uid="uid://bn0tb8rwm5gdo" path="res://Art/GAME/BOI.png" id="3_yf32t"]
+[ext_resource type="Script" path="res://Scripts/object.gd" id="1_hpuo6"]
+[ext_resource type="Shader" path="res://Art/shader/border.gdshader" id="2_2uk60"]
+[ext_resource type="Texture2D" uid="uid://bugl2mmesc50v" path="res://Art/GAME/BEDSIDETABLE.png" id="3_4ccv4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eeq1j"]
-shader = ExtResource("2_yj7sl")
+shader = ExtResource("2_2uk60")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/line_thickness = 0.0
 
@@ -77,11 +77,11 @@ size = Vector2(21, 66)
 position = Vector2(0, -10)
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("1_b1sji")
+script = ExtResource("1_hpuo6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_eeq1j")
-texture = ExtResource("3_yf32t")
+texture = ExtResource("3_4ccv4")
 offset = Vector2(0, -26)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
