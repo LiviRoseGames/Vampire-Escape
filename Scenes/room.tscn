@@ -56,5 +56,10 @@ position = Vector2(381, 163)
 [node name="Object" parent="." instance=ExtResource("2_nklyq")]
 position = Vector2(304, 135)
 sceneTransfer = "res://Scenes/desk.tscn"
+stoppingPointOffset = 64
+stoppingPointDirection = 2
 
 [node name="Cursor" parent="." instance=ExtResource("4_j6qiw")]
+
+[connection signal="send_PlayerStop" from="Object" to="Cursor" method="_on_object_send_player_stop"]
+[connection signal="movePlayer" from="Cursor" to="Player" method="_on_cursor_move_player"]

@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cu28ms6as3r4t" path="res://HOLY_DHIT.png" id="2_xds1l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cnyx1"]
-size = Vector2(28, 47)
+size = Vector2(9, 8)
 
 [node name="Player" type="Area2D"]
+collision_mask = 0
 script = ExtResource("1_aelvw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,9 +15,12 @@ texture = ExtResource("2_xds1l")
 offset = Vector2(0, -26)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_max_distance = 20.0
+debug_enabled = true
+debug_path_custom_color = Color(0.223529, 0.784314, 0.27451, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -24.5)
+position = Vector2(0.5, -4)
 shape = SubResource("RectangleShape2D_cnyx1")
 
 [connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
