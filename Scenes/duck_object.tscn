@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://n20w3364s4fp"]
+[gd_scene load_steps=8 format=3 uid="uid://37yts7qk8mu8"]
 
-[ext_resource type="Script" path="res://Scripts/object.gd" id="1_hpuo6"]
-[ext_resource type="Shader" path="res://Art/shader/border.gdshader" id="2_2uk60"]
-[ext_resource type="Texture2D" uid="uid://bugl2mmesc50v" path="res://Art/GAME/BEDSIDETABLE.png" id="3_4ccv4"]
+[ext_resource type="Script" path="res://Scripts/object.gd" id="1_waekk"]
+[ext_resource type="Shader" path="res://Art/shader/border.gdshader" id="2_ak4k4"]
+[ext_resource type="Texture2D" uid="uid://c2h7nw84yh17s" path="res://Art/GAME/DUCKART.png" id="3_ft083"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eeq1j"]
-shader = ExtResource("2_2uk60")
+shader = ExtResource("2_ak4k4")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/line_thickness = 0.0
 
@@ -74,11 +74,11 @@ _data = {
 position = Vector2(0, -10)
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("1_hpuo6")
+script = ExtResource("1_waekk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_eeq1j")
-texture = ExtResource("3_4ccv4")
+texture = ExtResource("3_ft083")
 offset = Vector2(0, -26)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -87,8 +87,8 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(0.5, -26)
-polygon = PackedVector2Array(-15.5, -8, -15.5, 8, -0.5, 15, 14.5, 8, 14.5, -8, -0.5, -15)
+position = Vector2(-7, -41)
+polygon = PackedVector2Array(-19, -13, -19, 18, 33, 43, 33, 12)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

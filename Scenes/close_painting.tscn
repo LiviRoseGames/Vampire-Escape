@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkv1usnk2ejb1"]
+
+[ext_resource type="Texture2D" uid="uid://byxjl8fe0ni24" path="res://Art/closeups/DUCKSCREEN.png" id="2_iqqpf"]
+
+[node name="Desk" type="Node2D"]
+
+[node name="Duckscreen" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_iqqpf")
+centered = false

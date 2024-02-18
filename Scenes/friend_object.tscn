@@ -70,8 +70,8 @@ _data = {
 "RESET": SubResource("Animation_2peoq")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vx7lm"]
-size = Vector2(21, 66)
+[sub_resource type="CircleShape2D" id="CircleShape2D_1h22w"]
+radius = 9.0
 
 [node name="Object" type="Area2D"]
 position = Vector2(0, -10)
@@ -89,9 +89,8 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(1, -30)
-shape = SubResource("RectangleShape2D_vx7lm")
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_1h22w")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

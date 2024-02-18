@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlbs5tpmsvx4i"]
+[gd_scene load_steps=8 format=3 uid="uid://dlbs5tpmsvx4i"]
 
 [ext_resource type="Script" path="res://Scripts/object.gd" id="1_sv301"]
 [ext_resource type="Shader" path="res://Art/shader/border.gdshader" id="2_iqe50"]
@@ -70,9 +70,6 @@ _data = {
 "RESET": SubResource("Animation_2peoq")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vx7lm"]
-size = Vector2(21, 66)
-
 [node name="Object" type="Area2D"]
 position = Vector2(0, -10)
 collision_layer = 2
@@ -89,9 +86,9 @@ libraries = {
 "": SubResource("AnimationLibrary_gg6wq")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(0.5, -26)
-shape = SubResource("RectangleShape2D_vx7lm")
+polygon = PackedVector2Array(-26.5, -60, -38.5, -54, -38.5, 28, 25.5, 60, 37.5, 54, 37.5, -28)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
