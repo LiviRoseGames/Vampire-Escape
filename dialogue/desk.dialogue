@@ -1,0 +1,24 @@
+~ desk
+
+The desk is covered in odds and ends. The drawer has an alphabetic combination lock. And for some reason there’s a cartoon of a duck scratched into the back of it
+
+- Examine the lock
+	set GlobalManager.examiningLock = true
+- Leave
+	set GlobalManager.inRoom = true
+=> END
+
+~ unlock_desk
+
+It unlocks and you’re able to open the drawer.
+
+~ diary
+
+Player: It looks like a very old torn up diary entry. I might be able to piece it back together.
+
+- Let me try
+	set GlobalManager.examiningDiary = true
+- Leave
+	set GlobalManager.inRoom = true
+
+=> END

@@ -11,37 +11,29 @@ config_version=5
 [application]
 
 config/name="Vampire Escape"
-run/main_scene="res://Scenes/title_screen.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="res://Scenes/Menu/title_screen.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalManager="*res://Scripts/globalManager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+GlobalTimer="*res://Scenes/timer.tscn"
+GlobalManager="*res://Scenes/global_manager.tscn"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/size/window_width_override=1920
-window/size/window_height_override=1080
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
-[input]
-
-move={
-"deadzone": 0.5,
-"events": []
-}
-
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Intro/IntroScene1.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/intro.dialogue", "res://dialogue/friend.dialogue", "res://dialogue/hunger.dialogue", "res://dialogue/desk.dialogue")
 
 [rendering]
 

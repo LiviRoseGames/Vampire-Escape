@@ -1,0 +1,50 @@
+~ friend
+
+if not GlobalManager.hasMetFriend:
+	% Friend: Thanks again for doing all this. I can’t believe any of this is real, what are the odds she would be interested in me you know? Oh, also the bite I guess. 
+	% Friend: No pressure, but my ability to ever enjoy the sun again is riding on you. So no pressure.
+	% Friend: You know when people say “Just ask her out, what’s the worst that can happen?” Well they don’t know what they’re talking about... Still worth it though.
+	set GlobalManager.hasMetFriend = true
+	=> friend_end
+
+if not GlobalManager.hasDesk and GlobalManager.hasMetFriend:
+	Friend: On the bright side I feel like I’m learning a lot about her. For example, she really likes ducks. They must mean a lot to her, for some reason. 
+
+if not GlobalManager.hasBook and GlobalManager.hasDesk and GlobalManager.hasMetFriend:
+	if not GlobalManager.friendResp:
+		Friend: I think I saw a padlock on her nightstand. 
+		Friend: It must have something important in there with a combination lock like that on it... 
+		Friend: No I wasn’t snooping, I was just curious.
+		set GlobalManager.friendResp = true
+	
+	else:
+		Friend: You know, learning she’s a vampire doesn’t bother me that much. 
+		Friend: I always did like older women. Wait, how old do you think she is? 
+		Friend: Like, when was she turned? Is it rude to ask?
+		Player: I mean-
+		Friend: Yeah, yeah I probably shouldn’t ask. Not til at least the 3rd date.
+		set GlobalManager.friendResp = false
+		
+
+if GlobalManager.hasBook and GlobalManager.hasDesk and GlobalManager.hasMetFriend:
+	if not GlobalManager.hasBlood:
+		Friend: Hope she’s ok, it sounded like she hit her head bad. She might be injured. 
+		Friend: I’d go to help her, but you know. Sunlight. 
+	else:
+		Friend: Do you think I need to learn this anti vampire stuff too now if I become one? 
+		Friend: Like, how do you even make holy water? Use a sacred text as a tea bag or something?
+		Player: Seriously?
+		Friend: What? It could work, you don’t know. 
+
+~ friend_end
+- Talk More
+	% Friend: Thanks again for doing all this. I can’t believe any of this is real, what are the odds she would be interested in me you know? Oh, also the bite I guess. 
+	% Friend: No pressure, but my ability to ever enjoy the sun again is riding on you. So no pressure.
+	% Friend: You know when people say “Just ask her out, what’s the worst that can happen?” Well they don’t know what they’re talking about... Still worth it though.
+	=> friend_end
+
+- Leave
+	set GlobalManager.inRoom = true
+
+
+=> END

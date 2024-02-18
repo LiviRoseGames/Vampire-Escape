@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgxps1c82x42a"]
+
+[ext_resource type="Shader" path="res://Shaders/ObjectBase.gdshader" id="1_3hnss"]
+[ext_resource type="Script" path="res://Scripts/ObjectBase.gd" id="1_04mna"]
+[ext_resource type="Texture2D" uid="uid://wiio1a7h1bb5" path="res://Art/GAME/DOOR.png" id="3_48erm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_drjca"]
+shader = ExtResource("1_3hnss")
+shader_parameter/line_color = Color(1, 1, 1, 0)
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="Animation" id="Animation_bv2ee"]
+resource_name = "Glow"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/line_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5s5o0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/line_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6wy5d"]
+_data = {
+"Glow": SubResource("Animation_bv2ee"),
+"RESET": SubResource("Animation_5s5o0")
+}
+
+[node name="ObjectBase" type="Area2D"]
+position = Vector2(408, 101)
+script = ExtResource("1_04mna")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_drjca")
+texture = ExtResource("3_48erm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-9, -33, -9, 23, -3, 33, -3, 23, -1, 23, 10, 29, 10, -24)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6wy5d")
+}
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dana8fpslq1gm"
+path="res://.godot/imported/hunger.dialogue-0bfdcb9c84c7155c46696202333a6366.tres"
+
+[deps]
+
+source_file="res://dialogue/hunger.dialogue"
+dest_files=["res://.godot/imported/hunger.dialogue-0bfdcb9c84c7155c46696202333a6366.tres"]
+
+[params]
+
+defaults=true

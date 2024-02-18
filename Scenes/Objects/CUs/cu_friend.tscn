@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba3jhmidie8cs"]
+
+[ext_resource type="Script" path="res://Scripts/cu_friend.gd" id="1_ko4so"]
+[ext_resource type="Texture2D" uid="uid://ptdhqy4mva1i" path="res://Art/closeups/FRIENDSCREEN.png" id="1_xhy7m"]
+
+[node name="cu_friend" type="Node2D"]
+script = ExtResource("1_ko4so")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_xhy7m")
+centered = false

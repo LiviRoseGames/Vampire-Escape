@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cytbh35gaitwf"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/title_screen.gd" id="1_c4qra"]
+[ext_resource type="Texture2D" uid="uid://dsng6noup2ryk" path="res://Art/menu/TITLE_SCREEN.png" id="1_i3uf2"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c4qra")
+
+[node name="TitleScreen" type="Sprite2D" parent="."]
+texture = ExtResource("1_i3uf2")
+centered = false
