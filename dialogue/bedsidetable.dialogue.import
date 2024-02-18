@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bneyk4ri2mah5"
+path="res://.godot/imported/bedsidetable.dialogue-d42e3ee9200460a21d7648cdff4fa999.tres"
+
+[deps]
+
+source_file="res://dialogue/bedsidetable.dialogue"
+dest_files=["res://.godot/imported/bedsidetable.dialogue-d42e3ee9200460a21d7648cdff4fa999.tres"]
+
+[params]
+
+defaults=true

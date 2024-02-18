@@ -19,4 +19,4 @@ offset_bottom = 360.0
 color = Color(0, 0, 0, 1)
 
 [node name="codeInput" parent="." instance=ExtResource("2_0jv5d")]
-type = "desk"
+type = "RICK"

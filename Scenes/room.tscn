@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://wbro6ceufdap" path="res://Scenes/Objects/Desk.tscn" id="13_1kwg7"]
 [ext_resource type="Texture2D" uid="uid://drm742wiu3nbo" path="res://Art/GAME/DESKCHAIR.png" id="13_noft6"]
 [ext_resource type="PackedScene" uid="uid://dbnxf4iefd88h" path="res://Scenes/Objects/Door.tscn" id="15_3ryhs"]
-[ext_resource type="PackedScene" uid="uid://b6mv5005perr6" path="res://Scenes/Objects/duckart.tscn" id="15_ojrqn"]
+[ext_resource type="PackedScene" uid="uid://b6mv5005perr6" path="res://Scenes/Objects/DuckArt.tscn" id="15_ojrqn"]
 [ext_resource type="Texture2D" uid="uid://n0sth188nkuy" path="res://Art/GAME/PLUSHCHAIR.png" id="16_hgv6x"]
 
 [sub_resource type="Animation" id="Animation_mggbb"]

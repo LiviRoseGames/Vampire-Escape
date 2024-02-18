@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce2yahoq1cmdf"]
+[gd_scene load_steps=3 format=3 uid="uid://ce2yahoq1cmdf"]
 
+[ext_resource type="Script" path="res://Scripts/cu_duck.gd" id="1_3yw4w"]
 [ext_resource type="Texture2D" uid="uid://byxjl8fe0ni24" path="res://Art/closeups/DUCKSCREEN.png" id="1_iqelm"]
 
 [node name="cu_duck" type="Node2D"]
+script = ExtResource("1_3yw4w")
 
 [node name="Duckscreen" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)

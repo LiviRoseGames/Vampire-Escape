@@ -1,0 +1,12 @@
+~ bedside_table
+
+A bedside table, complete with a reading lamp. And a drawer with a heavy duty numeric combination lock. 
+Not sketchy at all. 
+
+- examine the lock
+	set GlobalManager.examiningBSLock = true
+- examine the lamp
+        Player: it’s a lamp, possibly a cheap one. 
+- Leave
+	set GlobalManager.inRoom = true
+=> END

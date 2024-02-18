@@ -1,0 +1,9 @@
+~ painting
+It’s a beautiful painting of a duck. 
+Painstaking work went into this. 
+The inscription reads. “In memory of my beloved pet RICK”
+
+- Leave
+	set GlobalManager.inRoom = true
+
+=> END

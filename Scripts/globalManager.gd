@@ -10,6 +10,10 @@ var friendResp : bool = false
 #desk specific
 var examiningLock : bool = false
 var examiningDiary : bool = false
+var deskUnlock : bool = false
+
+#bedsidetable specific
+var examiningBSLock : bool = false
 
 #progression
 var hasBlood : bool = false

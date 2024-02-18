@@ -9,16 +9,24 @@ The desk is covered in odds and ends. The drawer has an alphabetic combination l
 => END
 
 ~ unlock_desk
-
-It unlocks and you’re able to open the drawer.
+if GlobalManager.deskUnlock == false:
+	It unlocks and you’re able to open the drawer.
+	set GlobalManager.deskUnlock = true
 
 ~ diary
 
-Player: It looks like a very old torn up diary entry. I might be able to piece it back together.
+Player: It looks like a very old torn up diary entry. Should I read it?
 
-- Let me try
-	set GlobalManager.examiningDiary = true
+- Read it!
+	Diary entry (day is too worn to read) 1872:
+	Carmilla: This is horrible, a living nightmare. A creature, out of the darkest tales attacked me in the night. 
+	Carmilla: I escaped with my life but not before it drank of my blood. 
+	Carmilla: I feel sickened, I feel different. I fear what I am becoming, and how little control I have. 
+	Carmilla: I pray I will learn to master this affliction in time. But now, all I feel is a terrible hunger. 
+	Carmilla: This will be the most challenging year of my life, but I will not let it be my final year. I swear this. I will survive.
 - Leave
 	set GlobalManager.inRoom = true
+
+
 
 => END

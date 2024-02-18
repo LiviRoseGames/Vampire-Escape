@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://wextf8usqbq6"]
+
+[ext_resource type="Texture2D" uid="uid://c6holumqsy6xd" path="res://Art/CODE_INPUT.png" id="1_awnhy"]
+[ext_resource type="Script" path="res://Scenes/code_input.gd" id="1_eacsc"]
+
+[node name="codeInput" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_eacsc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_awnhy")
+centered = false
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 82.5
+offset_top = 120.0
+offset_right = 220.5
+offset_bottom = 151.0
+max_length = 4
+
+[node name="Label0" type="Label" parent="."]
+offset_left = 84.0
+offset_top = 76.0
+offset_right = 113.0
+offset_bottom = 99.0
+text = "
+"
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="."]
+offset_left = 120.0
+offset_top = 76.0
+offset_right = 149.0
+offset_bottom = 99.0
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 156.0
+offset_top = 76.0
+offset_right = 185.0
+offset_bottom = 99.0
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 192.0
+offset_top = 76.0
+offset_right = 221.0
+offset_bottom = 99.0
+horizontal_alignment = 1
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]

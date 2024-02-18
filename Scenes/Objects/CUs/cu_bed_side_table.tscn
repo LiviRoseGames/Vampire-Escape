@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyjngm1ggnfvs"]
+
+[ext_resource type="Script" path="res://Scripts/cu_bed_side_table.gd" id="1_velb2"]
+[ext_resource type="Texture2D" uid="uid://ccbgmdr7grho2" path="res://Art/BEDSIDETABLESCREEN.png" id="1_ynl82"]
+[ext_resource type="Texture2D" uid="uid://dkc3rx5g338tr" path="res://Art/INSIDE.png" id="2_t67i8"]
+[ext_resource type="PackedScene" uid="uid://wextf8usqbq6" path="res://Scenes/code_input.tscn" id="3_4fv2y"]
+
+[node name="BedSideTable" type="Node2D"]
+script = ExtResource("1_velb2")
+
+[node name="Closed" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ynl82")
+centered = false
+
+[node name="Open" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("2_t67i8")
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.67451)
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0, 0, 0, 1)
+
+[node name="codeInput" parent="." instance=ExtResource("3_4fv2y")]
+visible = false
