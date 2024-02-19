@@ -1,0 +1,8 @@
+~ ending
+
+Carmilla: Uh, my aching, what happened? Oh no! What time is it? Am I too late?
+Friend: No it’s ok, I’m ok. She was able to figure out the recipe and save me. 
+Carmilla: Thank you, that’s such a relief. I was worried I’d passed on my curse to- What did you do to my mirror!
+set GlobalManager.endscreen = true
+
+=> END

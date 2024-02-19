@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://0054vbfa15ky"]
+
+[ext_resource type="Script" path="res://Scripts/cu_bathroom.gd" id="1_et1co"]
+[ext_resource type="Texture2D" uid="uid://bpss3lmhf6apl" path="res://Art/VAMPBATH3.png" id="2_6mi3v"]
+
+[node name="cu_bathroom" type="Node2D"]
+script = ExtResource("1_et1co")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_6mi3v")
+centered = false

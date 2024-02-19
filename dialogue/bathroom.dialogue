@@ -1,0 +1,11 @@
+~ bathroom
+Player: The bathroom is very modern and spacious for an apartment. It’s also spotless, except for Carmilla currently passed out and bleeding on the tile floor.
+
+- Examine Carmilla
+	Player: She isn’t breathing!
+	Player: Oh wait, vampire, that’s normal. 
+	=> bathroom
+- Leave
+	set GlobalManager.inRoom = true
+
+=> END

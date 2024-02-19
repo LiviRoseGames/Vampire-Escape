@@ -1,0 +1,21 @@
+~ mirror
+
+A full length mirror stands in the corner. 
+Player: Not sure why since Carmilla can’t see herself in it. 
+- Examine the mirror
+	Player: despite everything, it’s still you.
+	=> mirror
+- Leave
+	set GlobalManager.inRoom = true
+
+~ mirror_post_book
+- Examine the mirror
+	Player: despite everything, it’s still you.
+	=> mirror_post_book
+- Shatter mirror
+	Using the power of friendship and excessive frustrated violence... 
+	You smash the mirror and collect a silvery shard.
+	set GlobalManager.hasMirror = true
+- Leave
+	set GlobalManager.inRoom = true
+=> END

@@ -48,6 +48,7 @@ _data = {
 [node name="Mirror" type="Area2D"]
 position = Vector2(408, 101)
 script = ExtResource("1_hiw3y")
+TransitionScene = "mirror"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_drjca")

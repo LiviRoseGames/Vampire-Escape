@@ -28,3 +28,4 @@ color = Color(0, 0, 0, 1)
 
 [node name="codeInput" parent="." instance=ExtResource("3_4fv2y")]
 visible = false
+type = "sidetable"

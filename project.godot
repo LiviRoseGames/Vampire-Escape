@@ -33,7 +33,7 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/intro.dialogue", "res://dialogue/friend.dialogue", "res://dialogue/hunger.dialogue", "res://dialogue/desk.dialogue", "res://dialogue/bedsidetable.dialogue", "res://dialogue/painting.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/intro.dialogue", "res://dialogue/friend.dialogue", "res://dialogue/hunger.dialogue", "res://dialogue/desk.dialogue", "res://dialogue/bedsidetable.dialogue", "res://dialogue/painting.dialogue", "res://dialogue/bathroom.dialogue", "res://dialogue/bathroom2.dialogue", "res://dialogue/mirror.dialogue", "res://dialogue/ending.dialogue")
 
 [rendering]
 

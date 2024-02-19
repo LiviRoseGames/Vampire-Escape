@@ -4,6 +4,7 @@ The desk is covered in odds and ends. The drawer has an alphabetic combination l
 
 - Examine the lock
 	set GlobalManager.examiningLock = true
+	=> END
 - Leave
 	set GlobalManager.inRoom = true
 => END
@@ -27,6 +28,7 @@ Player: It looks like a very old torn up diary entry. Should I read it?
 - Leave
 	set GlobalManager.inRoom = true
 
+=> diary
 
 
 => END

@@ -3,10 +3,37 @@
 A bedside table, complete with a reading lamp. And a drawer with a heavy duty numeric combination lock. 
 Not sketchy at all. 
 
+~ question 
 - examine the lock
 	set GlobalManager.examiningBSLock = true
+	=> END
 - examine the lamp
-        Player: it’s a lamp, possibly a cheap one. 
+	Player: it’s a lamp, possibly a cheap one. 
+	=> question
 - Leave
 	set GlobalManager.inRoom = true
+	
+=> END
+~ book
+
+Player: it’s an old worn tome with a depiction of the sun on it. It feels ominous. 
+Player: Read bookmarked entries
+Player: One talks about a way to reverse vampirism before the first feeding. 
+Player: It says I need to make a tonic containing the Blood of the vampire that turned them. A shard of silver backed mirror. And holy water.
+
+~ loop
+- examine the lamp
+	Player: it’s a lamp, possibly a cheap one. 
+	=> loop
+- Leave
+	set GlobalManager.inRoom = true
+- read the book
+=> book
+- examine the lamp
+	Player: it’s a lamp, possibly a cheap one. 
+	=> loop
+- Leave
+	set GlobalManager.inRoom = true
+
+
 => END

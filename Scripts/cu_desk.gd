@@ -13,14 +13,14 @@ func _ready():
 		DialogueManager.show_dialogue_balloon(resource, "desk")
 	setLock(false)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if GlobalManager.examiningLock == true:
 		setLock(true)
 	if GlobalManager.hasDesk == true and not GlobalManager.deskUnlock:
 		DialogueManager.show_dialogue_balloon(resource, "unlock_desk")
-	
+		GlobalManager.deskUnlock = true
+		setLock(false)
 
 func setLock(state : bool):
 	blackRect.visible = state
